@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://besv1qlteyr7x"]
 
 [ext_resource type="Script" uid="uid://drw0owyl7nvya" path="res://scripts/entities/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" path="res://scenes/entities/faces/face_phase.tscn" id="2_c5rqy"]
 [ext_resource type="PackedScene" uid="uid://uyjwbio1g5ss" path="res://scenes/entities/faces/face_die_1.tscn" id="2_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://egl4dcy60m2g" path="res://glb/die_base.glb" id="2_onrkg"]
 [ext_resource type="PackedScene" uid="uid://e7bgw2oyheys" path="res://scenes/entities/faces/face_die_2.tscn" id="4_dw050"]
@@ -13,7 +12,6 @@
 [node name="Player" type="Node3D" unique_id=864264877 node_paths=PackedStringArray("test_override_slot")]
 script = ExtResource("1_4flbx")
 test_override_slot = NodePath("Pivot/CubeMesh/Slot_2")
-test_override_scene = ExtResource("2_c5rqy")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=16960478]
 

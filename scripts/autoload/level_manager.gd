@@ -25,11 +25,16 @@ const WAVE_AMPLITUDE := 0.35
 const WAVE_WIDTH := 1.5        # Breite des Ausschlag-Rings in Feldern
 const WAVE_DURATION := 2.0     # Sekunden bis eine einzelne Welle komplett abklingt
 
-## Schadens-Noise: zusätzliche, zeitlich wandernde Höhen-Störung auf allen
-## Wänden/Säulen, solange der Spieler nicht auf vollen HP ist (siehe
-## _on_player_hp_changed()).
+## Schadens-Noise: zusätzliche, zeitlich wandernde Höhen-Störung (Zittern) auf
+## allen Wänden/Säulen, solange der Spieler nicht auf vollen HP ist (siehe
+## _on_player_hp_changed()). DAMAGE_NOISE_FREQUENCY bestimmt zusammen mit
+## DAMAGE_NOISE_SPEED, wie schnell sich der Noise-Wert an einer festen
+## Position zeitlich ändert (ein voller Auf-Ab-Zyklus dauert ungefähr
+## 1 / (frequency * speed) Sekunden) - mit FastNoiseLites Standard-Frequenz
+## (0.01) bräuchte das hier über 60 Sekunden und wirkte dadurch eingefroren.
+const DAMAGE_NOISE_FREQUENCY := 1.0
 const DAMAGE_NOISE_AMPLITUDE := 0.25
-const DAMAGE_NOISE_SPEED := 1.5
+const DAMAGE_NOISE_SPEED := 8.0
 var _damage_noise := FastNoiseLite.new()
 var _damage_active: bool = false
 
@@ -103,6 +108,7 @@ func _ready() -> void:
 	_wall_height_noise.noise_type = FastNoiseLite.TYPE_PERLIN
 	_wall_height_noise.frequency = 1.0 / NOISE_SCALE
 	_damage_noise.noise_type = FastNoiseLite.TYPE_PERLIN
+	_damage_noise.frequency = DAMAGE_NOISE_FREQUENCY
 
 	GameManager.player_hp_changed.connect(_on_player_hp_changed)
 
