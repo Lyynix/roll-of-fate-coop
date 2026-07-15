@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://de16k8ukbdab5"]
+
+[ext_resource type="PackedScene" uid="uid://dgwwc2n3pd5we" path="res://glb/test_face.glb" id="1_t68pk"]
+[ext_resource type="Script" uid="uid://dhspw3revqkt3" path="res://scripts/entities/faces/base_face.gd" id="2_xubw7"]
+
+[node name="test_face" unique_id=1596558928 instance=ExtResource("1_t68pk")]
+script = ExtResource("2_xubw7")

@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/tutorial_long_press_hint.gd" id="1_hint"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_disc"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.55, 0.9, 1, 0.45)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_disc"]
+material = SubResource("StandardMaterial3D_disc")
+top_radius = 0.6
+bottom_radius = 0.6
+height = 0.03
+radial_segments = 32
+
+[node name="TutorialLongPressHint" type="Node3D"]
+script = ExtResource("1_hint")
+
+[node name="Disc" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.03, 0)
+mesh = SubResource("CylinderMesh_disc")
+
+[node name="Label3D" type="Label3D" parent="."]
+position = Vector3(0, 1.4, 0)
+billboard = 1
+no_depth_test = true
+outline_size = 12
+font_size = 40
+text = "Halten"

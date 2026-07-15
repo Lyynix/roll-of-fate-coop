@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/bully.gd" id="1_bully"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bully"]
+albedo_color = Color(0.6, 0.1, 0.1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bully"]
+material = SubResource("StandardMaterial3D_bully")
+size = Vector3(0.7, 0.7, 0.7)
+
+[node name="Bully" type="Node3D"]
+script = ExtResource("1_bully")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+mesh = SubResource("BoxMesh_bully")

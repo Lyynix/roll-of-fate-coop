@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://djf3rjv0m8qqu"]
+
+[ext_resource type="PackedScene" uid="uid://cuhdjkhbleldw" path="res://glb/turret.glb" id="1_tphga"]
+[ext_resource type="Script" uid="uid://ik7pmt5w4awx" path="res://scripts/entities/faces/turret_face.gd" id="2_1x3bt"]
+
+[node name="turret" unique_id=1727948368 instance=ExtResource("1_tphga")]
+script = ExtResource("2_1x3bt")
+
+[node name="Plane_007" parent="Turret" parent_id_path=PackedInt32Array(1671203697) index="0" unique_id=86130775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_006" parent="Turret/Plane_007" index="0" unique_id=2071335128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_005" parent="Turret/Plane_007/Plane_006/Plane_004" parent_id_path=PackedInt32Array(697813744) index="0" unique_id=1533579100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_013" parent="Turret/Plane_007/Plane_006/Plane_004/Plane_005" index="0" unique_id=1210171277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3175906e-15)
+
+[node name="Plane_011" parent="Turret/Plane_007/Plane_006/Plane_010" parent_id_path=PackedInt32Array(919836758) index="0" unique_id=1895438767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_012" parent="Turret/Plane_007/Plane_006/Plane_010/Plane_011" index="0" unique_id=1359422054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_015" parent="Turret/Plane_007/Plane_006/Plane_014" parent_id_path=PackedInt32Array(1865615052) index="0" unique_id=1620905454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2584136e-08, 0, 0)
+
+[node name="Plane_016" parent="Turret/Plane_007/Plane_006/Plane_014/Plane_015" index="0" unique_id=339065316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4702462e-15)
+
+[node name="Plane_018" parent="Turret/Plane_007/Plane_006/Plane_017" parent_id_path=PackedInt32Array(1983594163) index="0" unique_id=1940134381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane_019" parent="Turret/Plane_007/Plane_006/Plane_017/Plane_018" index="0" unique_id=180180813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3175906e-15)
+
+[node name="Plane_020" parent="Turret/Plane_007/Plane_006" index="4" unique_id=1362565189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="EmitPoint_Right" type="Node3D" parent="." index="2" unique_id=659431047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.21602027, 0)
+
+[node name="EmitPoint_Forward" type="Node3D" parent="." index="3" unique_id=71962449]
+transform = Transform3D(8.742278e-08, 0, 1, 0, 1, 0, -1, 0, 8.742278e-08, 0, 0.21602027, -0.5)
+
+[node name="EmitPoint_Left" type="Node3D" parent="." index="4" unique_id=283006651]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -0.5, 0.21602027, 0)
+
+[node name="EmitPoint_Back" type="Node3D" parent="." index="5" unique_id=196122387]
+transform = Transform3D(8.742278e-08, 0, -1, 0, 1, 0, 1, 0, 8.742278e-08, 0, 0.21602027, 0.5)

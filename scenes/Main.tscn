@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://0tlxw2qs3dq"]
+
+[ext_resource type="Script" uid="uid://cgl43uqbn8n08" path="res://scripts/main.gd" id="0_main"]
+[ext_resource type="PackedScene" uid="uid://besv1qlteyr7x" path="res://scenes/entities/player.tscn" id="1_0bbpv"]
+[ext_resource type="Shader" uid="uid://deobbj1872x4h" path="res://Main.gdshader" id="2_rarhs"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/MainMenu.tscn" id="4_menu"]
+[ext_resource type="Script" path="res://scripts/ui/tutorial_manager.gd" id="5_tutorial"]
+
+[sub_resource type="Environment" id="Environment_uu6xs"]
+background_mode = 1
+ambient_light_color = Color(0.186459, 0.18645903, 0.18645903, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onrkg"]
+render_priority = 0
+shader = ExtResource("2_rarhs")
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.15
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_uu6xs"]
+material = SubResource("ShaderMaterial_onrkg")
+size = Vector2(2, 2)
+
+[node name="Main" type="Node3D" unique_id=1433189782]
+script = ExtResource("0_main")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=907468090]
+environment = SubResource("Environment_uu6xs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=891717941]
+transform = Transform3D(0.97029257, -0.18384469, 0.15726861, -0.04805786, 0.49063128, 0.870041, -0.23711327, -0.8517523, 0.46722066, 0, 0, 0)
+
+[node name="LevelParent" type="Node3D" parent="." unique_id=183567492]
+
+[node name="Player" parent="." unique_id=864264877 instance=ExtResource("1_0bbpv")]
+
+[node name="PostProcessMesh" type="MeshInstance3D" parent="." unique_id=1149002339]
+visible = false
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_uu6xs")
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="MainMenu" parent="." instance=ExtResource("4_menu")]
+
+[node name="TutorialManager" type="Node" parent="."]
+script = ExtResource("5_tutorial")

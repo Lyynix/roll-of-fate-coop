@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://d30drg8am56sd" path="res://glb/face_shield_generator.glb" id="1_shield_glb"]
+[ext_resource type="Script" path="res://scripts/entities/faces/holo_shield_face.gd" id="2_shield"]
+
+[node name="Shield_Generator" instance=ExtResource("1_shield_glb")]
+script = ExtResource("2_shield")

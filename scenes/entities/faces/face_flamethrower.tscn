@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://p2u7y7xqy3ey"]
+
+[ext_resource type="PackedScene" uid="uid://b3wbpvthbjaie" path="res://glb/face_flamethrower.glb" id="1_flame_glb"]
+[ext_resource type="Script" uid="uid://2chsrwbotpgv" path="res://scripts/entities/faces/flamethrower_face.gd" id="2_flame"]
+
+[node name="Flamethrower" unique_id=912452532 instance=ExtResource("1_flame_glb")]
+script = ExtResource("2_flame")
+
+[node name="Thrower" parent="." index="1" unique_id=1962726341]
+transform = Transform3D(-1.6292068e-07, 1, 0, -1, -1.6292068e-07, 0, 0, 0, 1, 0, 0.142857, 0)
+
+[node name="Leg" parent="." index="2" unique_id=1195861923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="EmitPoint" type="Node3D" parent="." index="4" unique_id=802970830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 0.15, 0)

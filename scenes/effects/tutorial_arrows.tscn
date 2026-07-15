@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/tutorial_arrows.gd" id="1_arrows"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hint"]
+transparency = 1
+shading_mode = 0
+no_depth_test = true
+albedo_color = Color(0.55, 0.9, 1, 0.85)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_arrow"]
+material = SubResource("StandardMaterial3D_hint")
+top_radius = 0.0
+bottom_radius = 0.22
+height = 0.85
+radial_segments = 8
+
+[sub_resource type="TorusMesh" id="TorusMesh_ring"]
+material = SubResource("StandardMaterial3D_hint")
+inner_radius = 0.75
+outer_radius = 0.88
+rings = 6
+ring_segments = 24
+
+[node name="TutorialArrows" type="Node3D"]
+script = ExtResource("1_arrows")
+
+[node name="Visuals" type="Node3D" parent="."]
+
+[node name="Ring" type="MeshInstance3D" parent="Visuals"]
+position = Vector3(0, 0.03, 0)
+mesh = SubResource("TorusMesh_ring")
+
+[node name="ArrowForward" type="MeshInstance3D" parent="Visuals"]
+mesh = SubResource("CylinderMesh_arrow")
+
+[node name="ArrowBack" type="MeshInstance3D" parent="Visuals"]
+mesh = SubResource("CylinderMesh_arrow")
+
+[node name="ArrowRight" type="MeshInstance3D" parent="Visuals"]
+mesh = SubResource("CylinderMesh_arrow")
+
+[node name="ArrowLeft" type="MeshInstance3D" parent="Visuals"]
+mesh = SubResource("CylinderMesh_arrow")
+
+[node name="Label3D" type="Label3D" parent="."]
+position = Vector3(0, 1.4, 0)
+billboard = 1
+no_depth_test = true
+outline_size = 12
+font_size = 40
+text = "Plane deinen Zug voraus"

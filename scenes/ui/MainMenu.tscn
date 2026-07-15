@@ -1,0 +1,328 @@
+[gd_scene format=3 uid="uid://mk5usoe4v3i"]
+
+[ext_resource type="Script" uid="uid://ne351jqrla1n" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=307301910]
+layer = 10
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=415710282]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.055, 0.06, 0.09, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1527471832]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2146292873]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=638720453]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Roll of Fate"
+horizontal_alignment = 1
+
+[node name="HighscoreLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Highscore: 0 Pkt."
+horizontal_alignment = 1
+
+[node name="Spacer2" type="ColorRect" parent="CenterContainer/VBoxContainer" unique_id=521177642]
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=678309466]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Neues Spiel"
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1479784245]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Fortsetzen"
+
+[node name="CoopButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=214258785]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Multiplayer"
+
+[node name="Spacer" type="ColorRect" parent="CenterContainer/VBoxContainer" unique_id=1764096425]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1214520794]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Einstellungen"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=72334300]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Beenden"
+
+[node name="SettingsPanel" type="Control" parent="." unique_id=1728894981]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="SettingsPanel" unique_id=1781911781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/CenterContainer" unique_id=672641056]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=819094777]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Einstellungen"
+horizontal_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=195039440]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Musik"
+horizontal_alignment = 1
+
+[node name="MusicRow" type="HBoxContainer" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=906342760]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MusicMuteButton" type="Button" parent="SettingsPanel/CenterContainer/VBoxContainer/MusicRow" unique_id=1149230987]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "M"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/CenterContainer/VBoxContainer/MusicRow" unique_id=1691009705]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 10.0
+
+[node name="SfxLabel" type="Label" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=1159232875]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SfxRow" type="HBoxContainer" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=294539375]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="SfxMuteButton" type="Button" parent="SettingsPanel/CenterContainer/VBoxContainer/SfxRow" unique_id=337412830]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "M"
+
+[node name="SfxSlider" type="HSlider" parent="SettingsPanel/CenterContainer/VBoxContainer/SfxRow" unique_id=1952679203]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+value = 10.0
+
+[node name="BackButton" type="Button" parent="SettingsPanel/CenterContainer/VBoxContainer" unique_id=483648098]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Zurück"
+
+[node name="CreditsPanel" type="Control" parent="." unique_id=1728009598]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CreditsPanel" unique_id=1487563942]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/CenterContainer" unique_id=1999741397]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CreditsPanel/CenterContainer/VBoxContainer" unique_id=59554336]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CreditsPanel/CenterContainer/VBoxContainer" unique_id=1452037677]
+layout_mode = 2
+
+[node name="GameLabel" type="Label" parent="CreditsPanel/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=104806000]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Spiel & Assets"
+horizontal_alignment = 1
+
+[node name="GameLabel2" type="Label" parent="CreditsPanel/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=461700044]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Fabian Lux"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/CenterContainer/VBoxContainer" unique_id=157757999]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="CreditsPanel/CenterContainer/VBoxContainer/VBoxContainer" unique_id=1866387901]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Sound & Musik"
+horizontal_alignment = 1
+
+[node name="Dominik Braun" type="LinkButton" parent="CreditsPanel/CenterContainer/VBoxContainer/VBoxContainer" unique_id=1160785259]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 28
+text = "Dominik Braun"
+uri = "https://dominik-braun.net"
+
+[node name="CC BY" type="LinkButton" parent="CreditsPanel/CenterContainer/VBoxContainer/VBoxContainer" unique_id=315344191]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "CC BY 4.0"
+uri = "https://creativecommons.org/licenses/by/4.0/deed.de"
+
+[node name="BackButton" type="Button" parent="CreditsPanel/CenterContainer/VBoxContainer" unique_id=489563824]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Zurück"
+
+[node name="CoopPanel" type="Control" parent="." unique_id=352083298]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CoopPanel" unique_id=2016793324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CoopPanel/CenterContainer" unique_id=480938523]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=912835149]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Koop"
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="CoopPanel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Dein Name"
+horizontal_alignment = 1
+
+[node name="NameEdit" type="LineEdit" parent="CoopPanel/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(480, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 28
+max_length = 20
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=1672477535]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Suche nach Spielen …"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HostButton" type="Button" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=1385545797]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Hosten"
+
+[node name="HostListContainer" type="VBoxContainer" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=1170264595]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+
+[node name="CancelButton" type="Button" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=2111362909]
+visible = false
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Abbrechen"
+
+[node name="StartGameButton" type="Button" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=2145838140]
+visible = false
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Los geht's"
+
+[node name="BackButton" type="Button" parent="CoopPanel/CenterContainer/VBoxContainer" unique_id=921608504]
+custom_minimum_size = Vector2(320, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "Zurück"

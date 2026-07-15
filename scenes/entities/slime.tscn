@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b6xap2yh4tumw"]
+
+[ext_resource type="PackedScene" uid="uid://d13r5hxnte4m3" path="res://glb/slime.glb" id="1_2d52u"]
+[ext_resource type="Script" uid="uid://mugyul881j2c" path="res://scripts/entities/slime.gd" id="2_5ax0t"]
+[ext_resource type="PackedScene" uid="uid://bv1082aoxkgec" path="res://scenes/map_elements/slime_trace.tscn" id="3_0ftkj"]
+
+[node name="slime" unique_id=1018297346 instance=ExtResource("1_2d52u")]
+script = ExtResource("2_5ax0t")
+trace_scene = ExtResource("3_0ftkj")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dcq1gfksu73a2"]
+
+[ext_resource type="Script" uid="uid://khopwpuykd2g" path="res://scripts/map_elements/shield_sphere.gd" id="1_shield"]
+[ext_resource type="Shader" uid="uid://dsnucgeh38fw7" path="res://scenes/map_elements/shield_sphere.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_process"]
+shader = ExtResource("2_shader")
+shader_parameter/sphere_radius = 1.5
+shader_parameter/cone_half_angle = 0.5
+shader_parameter/phase_split = 0.28
+shader_parameter/launch_reach = 0.6
+shader_parameter/travel_time = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dot"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_dot"]
+material = SubResource("StandardMaterial3D_dot")
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 2
+
+[node name="ShieldSphere" type="GPUParticles3D" unique_id=731351888]
+emitting = false
+amount = 1000
+lifetime = 1.5
+local_coords = true
+process_material = SubResource("ShaderMaterial_process")
+draw_pass_1 = SubResource("SphereMesh_dot")
+script = ExtResource("1_shield")

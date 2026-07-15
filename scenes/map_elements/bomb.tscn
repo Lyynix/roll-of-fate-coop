@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/map_elements/bomb.gd" id="1_bomb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bomb"]
+albedo_color = Color(0.1, 0.1, 0.1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_bomb"]
+material = SubResource("StandardMaterial3D_bomb")
+radius = 0.3
+height = 0.6
+
+[node name="Bomb" type="Node3D"]
+script = ExtResource("1_bomb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("SphereMesh_bomb")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ffx0ce7xqqqd"]
+
+[ext_resource type="PackedScene" uid="uid://cw452t1g40f8e" path="res://scenes/entities/faces/base_face.tscn" id="1_jrb0b"]
+[ext_resource type="PackedScene" uid="uid://b8rxcqynbh08k" path="res://glb/die_face_5.glb" id="2_j4tob"]
+
+[node name="BaseFace" unique_id=980290681 instance=ExtResource("1_jrb0b")]
+
+[node name="die_face_5" parent="." index="0" unique_id=31627551 instance=ExtResource("2_j4tob")]

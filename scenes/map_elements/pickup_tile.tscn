@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/map_elements/face_pickup.gd" id="1_pickup"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pad"]
+albedo_color = Color(1, 0.85, 0.1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pad"]
+material = SubResource("StandardMaterial3D_pad")
+size = Vector2(1, 1)
+
+[node name="PickupTile" type="Node3D"]
+script = ExtResource("1_pickup")
+
+[node name="Pad" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_pad")
+
+[node name="Slot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
